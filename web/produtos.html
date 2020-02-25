@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <script src="js/produtos.js"></script>
+
+    </head>
+    <body>
+        <h1> Produtos </h1>
+        <table id="produtos"  class="table">
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Descrição</td>
+                    <td>Quantidade</td>
+                    <td>Preço</td>
+                    <td>Opções</td>
+                </tr>
+            </thead>
+
+            <tbody>
+
+            </tbody>
+
+        </table>
+
+        <br />
+        <button type="button"  class="btn btn-primary" onClick="abrirModalCadastro()">Novo Produto </button>
+
+        <div class="modal" tabindex="-1" role="dialog" id="myModal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Editar produto</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <span id="linhaCampoId">
+                                <label for="campoId">Id</label>
+                                <input type="text" id="campoId"> <br /> 
+                            </span>
+                            <label for="campoDescricao">Descrição</label>
+                            <input type="text" id="campoDescricao"> <br />
+                            <label for="campoPreco">Preço</label>
+                            <input type="text" id="campoPreco"> <br />
+                            <label for="campoQuantidade">Quantidade</label>
+                            <input type="text" id="campoQuantidade"> <br />
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" onclick="salvar()">Salvar</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
